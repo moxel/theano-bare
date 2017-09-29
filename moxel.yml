@@ -1,0 +1,10 @@
+name: theano-bare
+tag: latest
+image: py2-theano    # Docker environment to run the model with.
+input_space:            # Input type annotations.
+  x: array
+output_space:           # Output type annotations.
+  out: array
+main:                   # Main entrypoint to serve the model.
+  type: python  
+  entrypoint: serve.py::predict           
